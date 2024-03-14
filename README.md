@@ -24,7 +24,7 @@ https://github.com/Sajid2001/ShoryuChat/assets/60523377/5177e9f5-8946-4ae2-9bab-
 
 ## Dev Setup
 
-### Install dependendies
+### Install dependencies
 
 #### Frontend
 1. Run `npm install` in the `frontend` directory
