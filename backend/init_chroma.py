@@ -30,6 +30,7 @@ db = Chroma.from_documents(
     persist_directory="emb"
 )
 
+#sample query
 results = db.similarity_search(
     "What are Chun's anti-airs?",
 )
