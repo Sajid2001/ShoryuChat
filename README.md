@@ -7,6 +7,8 @@
 ### Messaging
 https://github.com/Sajid2001/ShoryuChat/assets/60523377/1973c1c2-f39f-4adc-95d8-338eb555b848
 
+### Multiple Conversations
+https://github.com/Sajid2001/ShoryuChat/assets/60523377/5177e9f5-8946-4ae2-9bab-bdb69fd3a061
 
 ## Stack
 - React (Vite)
