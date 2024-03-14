@@ -2,9 +2,13 @@
 ## An OpenAI-powered chat app that answers your biggest Street Fighter 6 Questions
 ![image](https://github.com/Sajid2001/ShoryuChat/assets/60523377/d83e0c7c-e8b2-46a2-893f-2c677ecfe65d)
 
-## Demo (Coming Soon)
+## Demo
 
-Demo video will be here
+### Messaging
+https://github.com/Sajid2001/ShoryuChat/assets/60523377/1973c1c2-f39f-4adc-95d8-338eb555b848
+
+### Multiple Conversations
+https://github.com/Sajid2001/ShoryuChat/assets/60523377/5177e9f5-8946-4ae2-9bab-bdb69fd3a061
 
 ## Stack
 - React (Vite)
@@ -16,7 +20,7 @@ Demo video will be here
 - Chroma
 - LangChain
 - SQLAlchemy (SQLite)
-- AuthLib (Google, Github)
+- AuthLib (Google, Github, Facebook)
 
 ## Dev Setup
 
