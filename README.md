@@ -4,7 +4,9 @@
 
 ## Demo (Coming Soon)
 
-Demo video will be here
+### Messaging
+https://github.com/Sajid2001/ShoryuChat/assets/60523377/1973c1c2-f39f-4adc-95d8-338eb555b848
+
 
 ## Stack
 - React (Vite)
@@ -16,7 +18,7 @@ Demo video will be here
 - Chroma
 - LangChain
 - SQLAlchemy (SQLite)
-- AuthLib (Google, Github)
+- AuthLib (Google, Github, Facebook)
 
 ## Dev Setup
 
