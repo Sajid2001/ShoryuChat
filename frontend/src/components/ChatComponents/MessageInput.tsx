@@ -11,8 +11,8 @@ const MessageInput = (props: Props) => {
     const { handleSubmit, newMessage, setNewMessage, hasConversations } = props
     return (
         <div className='flex flex-row'>
-            <input disabled={!hasConversations} placeholder={hasConversations ? 'Enter Message' : 'Chat Disabled! Please create a conversation'} type="text" value={newMessage} onChange={(e) => setNewMessage(e.target.value)} className='mr-2 w-5/6 p-2 mb-4 m-auto border-4 border-black rounded-md ' />
-            <button disabled={!hasConversations} onClick={(e) => handleSubmit(e)} className={`w-1/6 p-2 mb-4 m-auto border-4 border-black rounded-md ${!hasConversations ? 'cursor-not-allowed' : 'cursor-pointer'} ${hasConversations && 'hover:bg-black hover:text-white'}`}>Send</button>
+            <input disabled={!hasConversations} placeholder={hasConversations ? 'Enter Message' : 'Chat Disabled! Please create a conversation'} type="text" value={newMessage} onChange={(e) => setNewMessage(e.target.value)} className='mr-2 w-5/6 p-2 mb-4 m-auto border-4 border-black rounded-md  dark:bg-slate-800 dark:text-white' />
+            <button disabled={!hasConversations} onClick={(e) => handleSubmit(e)} className={`w-1/6 p-2 mb-4 m-auto border-4 border-black rounded-md ${!hasConversations ? 'cursor-not-allowed' : 'cursor-pointer'} ${hasConversations && 'hover:bg-slate-900 hover:text-white'}`}>Send</button>
         </div>
     )
 }

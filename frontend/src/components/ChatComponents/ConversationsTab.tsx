@@ -89,13 +89,13 @@ const ConversationsTab = (props: Props) => {
         <>
             {isOpen &&
             <div className='w-full md:w-1/4 my-3 m-auto flex flex-col'>
-                <div className=' border-black border-4 rounded-md h-[500px]' style={{ overflowY: 'auto' }}>
+                <div className=' border-black border-4 rounded-md h-[400px]' style={{ overflowY: 'auto' }}>
                     {conversations.map((conversation, index) => (
                         <div
                             onClick={() => handleChangeConversation(conversation)}
                             key={index}
                             className=
-                            {`text-xl flex flex-row justify-between items-center w-full p-2 hover:bg-black hover:text-white ${conversation.id === selectedConversation?.id ? 'bg-black text-white' : ''}`}
+                            {`text-xl flex flex-row justify-between items-center w-full p-2 hover:bg-slate-900 hover:text-white ${conversation.id === selectedConversation?.id ? 'bg-slate-900 text-white' : ''}`}
                         >
                             {conversation.character} - {conversation.name.length > 10 ? conversation.name.slice(0, 10) + '...' : conversation.name}
                             <button className='z-10 ml-2' onClick={() => handleOpenDialog()}>
@@ -105,16 +105,16 @@ const ConversationsTab = (props: Props) => {
                     ))}
                 </div>
                 <div className='text-xl w-full flex flex-col gap-2 my-2'>
-                    <select value={selectedCharacter} onChange={(e) => setSelectedCharacter(e.target.value)} className='border-4 border-black rounded-md p-1'>
+                    <select value={selectedCharacter} onChange={(e) => setSelectedCharacter(e.target.value)} className='border-4 border-black dark:gray-600 rounded-md p-1 dark:bg-slate-800'>
                         {SFCharacters.map((char, index) => (
                             <option key={index} value={char}>{char}</option>
                         ))}
                     </select>
-                    <input value={newConversation} onChange={(e) => setNewConversation(e.target.value)} className='border-4 border-black rounded-md p-1' placeholder='Conversation Name' />
+                    <input value={newConversation} onChange={(e) => setNewConversation(e.target.value)} className='border-4 border-black rounded-md p-1 dark:bg-slate-800 dark:text-white' placeholder='Conversation Name' />
                     <button
                         disabled={loading}
                         onClick={(e) => handleSubmit(e)}
-                        className='border-4 border-black rounded-md text-xl w-full p-1 hover:bg-black hover:text-white'>
+                        className='border-4 border-black rounded-md text-xl w-full p-1 hover:bg-slate-900 hover:text-white'>
                         New Conversation
                     </button>
                 </div>

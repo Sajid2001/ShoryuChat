@@ -2,7 +2,6 @@ import Chat from "./components/ChatComponents/Chat"
 import Login from "./components/LoginComponents/Login"
 import Navbar from "./components/Navbar"
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-import SignUp from "./components/SignUpComponents/SignUp"
 import { useState, useEffect } from "react"
 import axios from "axios"
 import { useDispatch, useSelector } from "react-redux"
@@ -34,13 +33,12 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="dark:bg-slate-800 dark:text-white">
       <BrowserRouter>
         <Navbar/>
         <Routes>
           <Route path="/" element={user.id !== -1 ? <Chat/> : <Navigate to="/login"/>}/>
           <Route path="/login" element={user.id === -1 ? <Login/> : <Navigate to="/"/>}/>
-          <Route path="/signup" element={user.id === -1 ? <SignUp/> : <Navigate to="/"/>}/>
         </Routes>
       </BrowserRouter>
     </div>

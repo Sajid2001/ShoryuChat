@@ -24,9 +24,9 @@ const MessagesBox = (props: Props) => {
     }, [messages]);
 
     return (
-        <div ref={messagesBoxRef} className='h-[500px] w-full my-4 m-auto border-black border-4 rounded-md flex flex-grow flex-col'style={{ overflowY: 'auto' }}>
+        <div ref={messagesBoxRef} className='h-[400px] w-full my-4 m-auto border-black border-4 rounded-md flex flex-grow flex-col'style={{ overflowY: 'auto' }}>
             {messages.map((message, index) => (
-                <p key={index} className={`text-xl p-2 ${message.role === 'human' ? 'text-right text-white bg-black' : 'text-left text-black bg-white'}`}>{message.text}</p>
+                <p key={index} className={`text-xl leading-relaxed px-2 py-4 ${message.role === 'human' ? 'text-right text-white bg-slate-900' : 'text-left text-black bg-white dark:bg-slate-800 dark:text-white'}`}>{message.text}</p>
             ))}
        {loading && <div className='text-xl text-left p-2 animate-pulse flex flex-col justify-left gap-3 my-4'>
                             <div className="rounded-lg bg-slate-200 h-3 w-full"></div>

@@ -4,6 +4,7 @@ import { User } from "../models/User"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import { logout } from "../redux/slices/user"
+import DarkModeToggle from "./DarkModeToggle"
 
 const Navbar = () => {
     const user: User = useSelector((state: any) => state.user.value)
@@ -14,7 +15,7 @@ const Navbar = () => {
     const handleLogout = () => {
         axios.get('/auth/logout').then(() => {
             dispatch(logout())
-            localStorage.clear()
+            localStorage.removeItem('conversation');
             navigate('/login')
         })
     }
@@ -23,8 +24,8 @@ const Navbar = () => {
         if (user.id !== -1) {
             return (
                 <>
-                    <li><span className="text-white font-bold flex justify-center items-center gap-5">{user.username} <img src={user.avatar} className="w-10 h-10 rounded-full" /></span></li>
-                    <li><button onClick={handleLogout} className="text-black bg-white px-4 py-2 rounded hover:bg-slate-200 w-full">Log Out</button></li>
+                    <li><span className="text-white font-bold flex justify-center items-center gap-3">{user.username} <img src={user.avatar} className="w-10 h-10 rounded-full" /></span></li>
+                    <li><button onClick={handleLogout} className="text-black bg-white px-4 py-2 rounded hover:bg-slate-200 dark:bg-slate-600 dark:hover:bg-slate-700 dark:text-white w-full">Log Out</button></li>
                 </>
             )
         }
@@ -32,6 +33,7 @@ const Navbar = () => {
             return (
                 <>
                     <li><a href="/login" className="text-white px-4 py-2 rounded w-full">Log In</a></li>
+                    <li><a href="/login" className="text-white px-4 py-2 rounded w-full">Sign Up</a></li>
                 </>
             )
         }
@@ -46,7 +48,8 @@ const Navbar = () => {
                         <a href="/">ShoryuChat</a>
                     </div>
                     <div className="hidden md:block">
-                        <ul className="flex items-center space-x-8">
+                        <ul className="flex items-center space-x-5">
+                            <DarkModeToggle/>
                             {handleNavbarLinks()}
                         </ul>
                     </div>

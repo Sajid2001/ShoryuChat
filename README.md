@@ -61,5 +61,5 @@ FACEBOOK_CLIENT_SECRET=<Facebook OAuth Client Secret>
 ## Roadmap
 - [x] Train on all other SF Characters
 - [x] Add responsiveness to Chat
-- [ ] Add dark mode
+- [x] Add dark mode
 - [ ] Implement Chat Memory (Postponed indefinitely)

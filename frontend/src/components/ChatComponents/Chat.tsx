@@ -74,14 +74,16 @@ const Chat = () => {
     }
 
     return (
-        <div className='flex flex-col justify-center gap-3 w-[90%] lg:w-2/3 my-[50px] m-auto p-2 min-h-[550px] text-center border-black border-4 rounded-md'>
-                <h1 className='text-2xl font-bold'>{conversation ? conversation.character + ' - ' + conversation.name : 'No Conversation Selected'}</h1>
-                <button onClick={() => setIsOpen(!isOpen)} className='w-5/6 md:w-1/3 text-xl bg-black text-white p-2 rounded-md font-bold mx-auto'>{isOpen ? 'Hide' : 'Show'} Conversations</button>
-            <div className='flex flex-col justify-center md:flex-row h-full gap-4'>
-                <ConversationsTab isOpen={isOpen} setMessages={setMessages} selectedConversation={conversation} setConversations={setConversations} handleChangeConversation={handleChangeConversation} conversations={conversations} />
-                <div className='flex flex-col w-full'>
-                    <MessagesBox loading={loading} messages={messages} />
-                    <MessageInput hasConversations={conversations.length > 0} handleSubmit={handleSubmit} newMessage={newMessage} setNewMessage={setNewMessage} />
+        <div className='py-8'>
+            <div className='flex flex-col justify-center gap-3 w-[90%] lg:w-2/3 m-auto p-2 min-h-[550px] text-center border-black border-4 rounded-md'>
+                    <h1 className='text-2xl font-bold'>{conversation ? conversation.character + ' - ' + conversation.name : 'No Conversation Selected'}</h1>
+                    <button onClick={() => setIsOpen(!isOpen)} className='w-5/6 md:w-1/3 text-xl bg-slate-900 text-white p-2 rounded-md font-bold mx-auto'>{isOpen ? 'Hide' : 'Show'} Conversations</button>
+                <div className='flex flex-col justify-center md:flex-row h-full gap-4'>
+                    <ConversationsTab isOpen={isOpen} setMessages={setMessages} selectedConversation={conversation} setConversations={setConversations} handleChangeConversation={handleChangeConversation} conversations={conversations} />
+                    <div className='flex flex-col w-full'>
+                        <MessagesBox loading={loading} messages={messages} />
+                        <MessageInput hasConversations={conversations.length > 0} handleSubmit={handleSubmit} newMessage={newMessage} setNewMessage={setNewMessage} />
+                    </div>
                 </div>
             </div>
         </div>
