@@ -5,10 +5,13 @@
 ## Demo
 
 ### Messaging
-https://github.com/Sajid2001/ShoryuChat/assets/60523377/1973c1c2-f39f-4adc-95d8-338eb555b848
+https://github.com/Sajid2001/ShoryuChat/assets/60523377/1a5763a9-bb11-41b8-b7c9-493799ed1fe3
 
 ### Multiple Conversations
-https://github.com/Sajid2001/ShoryuChat/assets/60523377/5177e9f5-8946-4ae2-9bab-bdb69fd3a061
+https://github.com/Sajid2001/ShoryuChat/assets/60523377/83ceddec-61f1-4be1-8567-12b3d7bb70a9
+
+### Dark Mode
+https://github.com/Sajid2001/ShoryuChat/assets/60523377/942d2795-77fa-48d7-ac0c-3aec2d55c4e9
 
 ## Stack
 - React (Vite)
