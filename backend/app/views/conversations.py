@@ -12,7 +12,8 @@ def get_conversations():
     user_id = session['user']['id']
     if request.method == 'POST':
         name = request.json['name']
-        conversation = Conversation(name=name, user_id=user_id)
+        character = request.json['character']
+        conversation = Conversation(name=name, user_id=user_id, character=character)
         db.session.add(conversation)
         db.session.commit()
         return conversation_schema.dump(conversation)

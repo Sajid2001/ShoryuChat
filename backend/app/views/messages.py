@@ -1,7 +1,8 @@
 from flask import Blueprint, request, jsonify
 from .. import db
 from .. models.messages import Message, messages_schema, message_schema
-from ..chat.chat import chain
+from .. models.conversations import Conversation
+from ..chat.chat import build_chain
 from ..middleware.require_login import require_login
 
 messages = Blueprint('messages', __name__)
@@ -11,10 +12,12 @@ messages = Blueprint('messages', __name__)
 def get_messages(conversation_id):
     # this is where the langchain prompt goes
     if request.method == 'POST':
+        conversation = Conversation.query.get(conversation_id)
         text = request.json['text']
         role = request.json['role']
         human_message = Message(text=text, role=role, conversation_id=conversation_id)
         db.session.add(human_message)
+        chain = build_chain(conversation.character)
         chain_message_text = chain.invoke(text)
         bot_message = Message(text=chain_message_text['result'], role="ai", conversation_id=conversation_id)
         db.session.add(bot_message)

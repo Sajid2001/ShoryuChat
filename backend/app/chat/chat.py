@@ -18,10 +18,17 @@ chat = ChatOpenAI()
 #         memory=memory,
 #     )
 
-chain = RetrievalQA.from_chain_type(
-    llm=chat,
-    retriever=vectorstore.as_retriever(),
-    chain_type="stuff",
-)
+def build_retriever(character):
+    search_kwargs = {"filter": {"character": character}}
+    return vectorstore.as_retriever(search_kwargs=search_kwargs)
+
+def build_chain(character):
+    chain = RetrievalQA.from_chain_type(
+        llm=chat,
+        retriever=build_retriever(character),
+        chain_type="stuff",
+    )
+
+    return chain
 
 
