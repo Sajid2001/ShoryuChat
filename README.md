@@ -59,15 +59,7 @@ FACEBOOK_CLIENT_SECRET=<Facebook OAuth Client Secret>
 ```
 
 ## Roadmap
-- [ ] Train on more SF Characters
-    - [x] Chun Li
-    - [ ] Juri
-    - [ ] Dhalsim
-    - [ ] Ryu
-    - [ ] Ken
-    - [ ] JP
-    - [ ] Blanka
-    - [ ] DeeJay
-- [ ] Look at other file options
-- [ ] Add responsiveness to Chat
+- [x] Train on all other SF Characters
+- [x] Add responsiveness to Chat
+- [ ] Add dark mode
 - [ ] Implement Chat Memory (Postponed indefinitely)
